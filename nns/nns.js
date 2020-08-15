@@ -75,7 +75,7 @@ class NeuralNetwork{
   cost(test_data,test_output){
     let outputs = this.feed_forward(test_data);
     outputs.subtract(test_output);
-    outputs.map(square);
+    outputs.map(Square);
     let error=0;
     for(let i=0; i< outputs.rows; i++){
       for (let j=0; j<outputs.cols; j++){
@@ -86,7 +86,7 @@ class NeuralNetwork{
   }
 }
 
-function square(a){
+function Square(a){
   return Math.pow(a,2);
 }
 
